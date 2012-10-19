@@ -11,7 +11,13 @@ from js.json_template import json_template
 
 library = Library('obviel', 'resources')
 
-obviel = Resource(library, 'obviel.js', depends=[jquery, json_template])
+obviel_template = Resource(
+    library, 'obviel-template.js')
+
+
+obviel = Resource(
+    library, 'obviel.js',
+    depends=[jquery, json_template, obviel_template])
 
 forms = Resource(library, 'obviel-forms.js', depends=[obviel, json2, datalink,
                                                       gettext])
