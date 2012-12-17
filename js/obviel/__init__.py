@@ -29,3 +29,4 @@ forms_autocomplete = Resource(library, 'obviel-forms-autocomplete.js',
 patterns = Resource(library, 'obviel-patterns.js', depends=[obviel])
 jgrowl = Resource(library, 'obviel-jgrowl.js', depends=[obviel, jgrowl_css,
                                                         jgrowl])
+sync = Resource(library, 'obviel-sync.js', depends=[obviel])
