@@ -1,8 +1,0 @@
-#!/bin/bash
-
-base=$(dirname $0)/js/obviel/resources
-
-rm -rf $base
-mkdir -p $base
-cd  $base
-tar --strip-components 3 -vxzf $1 */src/obviel/*
