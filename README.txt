@@ -20,15 +20,26 @@ You can the following resources from ``js.obviel``:
 
 * ``obviel`` (``obviel.js``)
 
+* ``obviel_template`` (``obviel-template.js``). Obviel currently
+  includes this automatically (along with ``json_template`` and
+  ``i18n``).
+
 * ``forms`` (``obviel-forms.js``)
 
 * ``forms_datepicker`` (``obviel-forms-datepicker.js``)
 
 * ``forms_autocomplete`` (``obviel-forms-autocomplete``)
 
+* ``forms_i18n`` (``obviel-forms.i18n``)
+
 * ``forms_nl`` (``obviel-forms-nl.js``)
 
 * ``patterns`` (``obviel-patterns.js``)
 
 * ``jgrowl`` (``obviel-jgrowl.js``)
+
+* ``i18n`` (``obviel-i18n.js``)
+
+* ``traject`` (``obviel-traject.js``)
  
+* ``sync`` (``obviel-sync.js``)

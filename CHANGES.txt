@@ -4,8 +4,15 @@ CHANGES
 1.0b4 (unreleased)
 ==================
 
-- Nothing changed yet.
+- Packaged Obviel 1.0b4.
 
+- Improve dependencies for ``obviel``, ``obviel_template``, ``forms``,
+  ``sync``.
+
+- Add ``traject``, ``i18n``, ``forms_i18n`` resources.
+
+- Improve sync dependencies, but not right yet: need to package jshashtable
+  and jshashset first.
 
 1.0b3 (2012-12-17)
 ==================
