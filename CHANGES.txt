@@ -1,7 +1,7 @@
 CHANGES
 *******
 
-1.0b4-1 (unreleased)
+1.0b4-1 (2013-01-10)
 ====================
 
 - Fix the way package data is installed; rely on MANIFEST.in
