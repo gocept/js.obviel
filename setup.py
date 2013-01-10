@@ -23,12 +23,7 @@ setup(
     license='BSD',
     packages=find_packages(),
     namespace_packages=['js'],
-#    include_package_data=True,
-    package_data={
-        'js.obviel': ['resources'],
-        '': ['*.js'],
-        'js.obviel': ['resources/*.js'],
-        },
+    include_package_data=True,
     zip_safe=False,
     install_requires=[
         'fanstatic',

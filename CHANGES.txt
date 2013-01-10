@@ -1,11 +1,12 @@
 CHANGES
 *******
 
-1.0b5 (unreleased)
-==================
+1.0b4-1 (unreleased)
+====================
 
-- Nothing changed yet.
-
+- Fix the way package data is installed; rely on MANIFEST.in
+  information only. Previously non-js files were not included, and
+  these are needed for forms i18n support.
 
 1.0b4 (2013-01-09)
 ==================
