@@ -1,8 +1,8 @@
 CHANGES
 *******
 
-1.04-2 (unreleased)
-===================
+1.0b4-2 (2013-01-14)
+====================
 
 - There was a bug in the way form i18n was rendered as a link tag.
 
