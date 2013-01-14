@@ -31,7 +31,7 @@ forms_autocomplete = Resource(library, 'obviel-forms-autocomplete.js',
                               depends=[forms, jqueryui])
 
 def i18n_renderer(url):
-    return '<link rel="i18n" href="%s"></link>' % url
+    return '<link rel="i18n" href="%s" />' % url
     
 forms_i18n = Resource(library, 'obviel-forms.i18n',
                       depends=[i18n],

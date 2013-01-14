@@ -4,8 +4,7 @@ CHANGES
 1.0b4-3 (unreleased)
 ====================
 
-- Nothing changed yet.
-
+- A minor tweak in how the link tag is rendered.
 
 1.0b4-2 (2013-01-14)
 ====================
