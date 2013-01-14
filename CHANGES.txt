@@ -1,7 +1,7 @@
 CHANGES
 *******
 
-1.0b4-3 (unreleased)
+1.0b4-3 (2013-01-14)
 ====================
 
 - A minor tweak in how the link tag is rendered.
