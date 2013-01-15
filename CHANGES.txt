@@ -4,8 +4,9 @@ CHANGES
 1.0b4-4 (unreleased)
 ====================
 
-- Nothing changed yet.
-
+- There is a sort-a dependency of obviel.i18n to obviel.template, for
+  obviel.i18n.variables. Really need to shuffle code around in Obviel,
+  but for now, fix dependency.
 
 1.0b4-3 (2013-01-14)
 ====================

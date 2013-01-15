@@ -14,7 +14,8 @@ library = Library('obviel', 'resources')
 obviel_template = Resource(
     library, 'obviel-template.js', depends=[jquery, json2])
 
-i18n = Resource(library, 'obviel-i18n.js', depends=[jquery, gettext])
+i18n = Resource(library, 'obviel-i18n.js', depends=[
+        jquery, obviel_template, gettext])
 
 # XXX obviel doesn't strictly use obviel_template or json_template, nor i18n,
 # but then we need to make sure they get included *before* obviel core is,
