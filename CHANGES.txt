@@ -1,6 +1,12 @@
 CHANGES
 *******
 
+1.0b3-3-gocept (unreleased)
+===========================
+
+- Nothing changed yet.
+
+
 1.0b3-2-gocept (2013-03-22)
 ===========================
 
