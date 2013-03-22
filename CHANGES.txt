@@ -4,7 +4,12 @@ CHANGES
 1.0b3-1 (unreleased)
 ====================
 
-- Nothing changed yet.
+- Made obviel-template.js compatible with IE 8.
+
+- I have decided to mark elements with a data-special-attr="true" attribute
+  rather than setting a class, because it was the most obvious way. Maybe
+  someone with deeper insight can fix this issue by reordering actions
+  taking place (expanding dynamic class attribute vs. data-id/-src).
 
 
 1.0b3 (2012-12-17)

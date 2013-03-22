@@ -363,7 +363,7 @@ obviel.template = {};
         indexes.reverse();
 
         var c = new module.Codegen('node');
-        for (var j in indexes) {
+        for (var j = 0; j < indexes.length; j++) {
             c.push('node = node.childNodes[' + indexes[j] + '];');
         }
         c.push('return node;');
@@ -518,7 +518,7 @@ obviel.template = {};
     
     module.Section.prototype.renderDynamicElements = function(el, scope,
                                                                 context) {
-        for (var i in this.dynamicElements) {
+        for (var i = 0; i < this.dynamicElements.length; i++) {
             var value = this.dynamicElements[i];
             var dynamicEl = value.finder(el);
             value.dynamicElement.render(dynamicEl, scope, context);
@@ -527,7 +527,7 @@ obviel.template = {};
 
     module.Section.prototype.renderViews = function(el, scope,
                                                      context) {
-        for (var i in this.viewElements) {
+        for (var i = 0; i < this.viewElements.length; i++) {
             var value = this.viewElements[i];
             var viewEl = value.finder(el);
             value.viewElement.render(viewEl, scope, context);
@@ -540,12 +540,12 @@ obviel.template = {};
         // first we find all elements. we do this before rendering starts,
         // as rendering can in some cases (data-each) insert new elements
         // and that would break the finding
-        for (var i in this.subSections) {
+        for (var i = 0; i < this.subSections.length; i++) {
             toRender.push({value: this.subSections[i],
                             subSectionEl: this.subSections[i].finder(el)});
         }
         // now we can do the rendering
-        for (i in toRender) {
+        for (i = 0; i < toRender.length; i++) {
             var r = toRender[i];
             r.value.subSection.render(r.subSectionEl, scope, context);
         }
@@ -897,7 +897,7 @@ obviel.template = {};
         var tokens = module.tokenize(text);
         var dynamic = false;
         
-        for (var i in tokens) {
+        for (var i = 0; i < tokens.length; i++) {
             var token = tokens[i];
             if (token.type === module.TEXT_TOKEN) {
                 this.parts.push(token.value);
@@ -919,7 +919,7 @@ obviel.template = {};
     
     module.DynamicText.prototype.render = function(el, scope, context) {
         var result = this.parts.slice(0);
-        for (var i in this.variables) {
+        for (var i = 0; i < this.variables.length; i++) {
             var variable = this.variables[i];
             result[variable.index] = variable.value.render(el, scope, context);
         }
@@ -1154,7 +1154,7 @@ obviel.template = {};
         // split with space character
         var parts = dataTrans.split(' ');
         
-        for (var i in parts) {
+        for (var i = 0; i < parts.length; i++) {
             var part = trim(parts[i]);
             if (part === '') {
                 continue;
@@ -1253,7 +1253,7 @@ obviel.template = {};
         // split with space character
         var parts = dataPlural.split(' ');
         
-        for (var i in parts) {
+        for (var i = 0; i < parts.length; i++) {
             var part = trim(parts[i]);
             if (part === '') {
                 continue;
@@ -1747,7 +1747,7 @@ obviel.template = {};
     };
 
     resolveInObj = function(obj, names) {
-        for (var i in names) {
+        for (var i = 0; i < names.length; i++) {
             var name = names[i];
             obj = obj[name];
             if (obj === undefined) {
@@ -1930,7 +1930,7 @@ obviel.template = {};
         // cache the tokens so we get things faster during rendering time
         var tokens = cachedTokenize(messageId);
         var nameTokens = 0;
-        for (var i in tokens) {
+        for (var i = 0; i < tokens.length; i++) {
             var token = tokens[i];
             // if we run into any non-whitespace text token at all,
             // we assume we have something to translate
@@ -2026,7 +2026,7 @@ obviel.template = {};
         var names = getAllVariableNames(singular, plural);
         
         var result = null;
-        for (var name in names) {
+        for (var i = 0; i < names.length; i++) {
             if (result === null) {
                 result = name;
             } else {
