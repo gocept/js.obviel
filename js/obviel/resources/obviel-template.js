@@ -661,7 +661,7 @@ obviel.template = {};
         var name, value;
 
         for (name in SPECIAL_ATTR) {
-            if (!el.hasAttribute('data-' + name)) {
+            if (!el.getAttribute('data-' + name)) {
                 continue;
             }
             value = el.getAttribute('data-' + name);
@@ -674,7 +674,7 @@ obviel.template = {};
     };
     
     module.DynamicElement.prototype.compileDataEl = function(el) {
-        if (!el.hasAttribute('data-el')) {
+        if (!el.getAttribute('data-el')) {
             return;
         }
         // non-destructively read data-el attribute, leave it in place
@@ -687,7 +687,7 @@ obviel.template = {};
     };
 
     module.DynamicElement.prototype.compileDataAttr = function(el) {
-        if (!el.hasAttribute('data-attr')) {
+        if (!el.getAttribute('data-attr')) {
             return;
         }
         // non-destructively read data-attr attribute, leave it in place
@@ -697,7 +697,7 @@ obviel.template = {};
             throw new module.CompilationError(
                 el, "data-attr cannot be empty");
         }
-        if (!el.hasAttribute('data-value')) {
+        if (!el.getAttribute('data-value')) {
             throw new module.CompilationError(
                 el, "data-attr must be combined with data-value");
         }
@@ -707,7 +707,7 @@ obviel.template = {};
     };
 
     module.DynamicElement.prototype.compileDataUnwrap = function(el) {
-        if (!el.hasAttribute('data-unwrap')) {
+        if (!el.getAttribute('data-unwrap')) {
             return;
         }
         $(el).addClass('obviel-template-data-unwrap');
@@ -1130,7 +1130,7 @@ obviel.template = {};
     
     module.TransInfo.prototype.compileDataTrans = function(el) {
         var dataTrans = null;
-        if (el.hasAttribute('data-trans')) {
+        if (el.getAttribute('data-trans')) {
             dataTrans = el.getAttribute('data-trans');
             el.removeAttribute('data-trans');
         }
@@ -1202,7 +1202,7 @@ obviel.template = {};
 
     module.TransInfo.prototype.compileDataTvar = function(el) {
         var dataTvar = null;
-        if (el.hasAttribute('data-tvar')) {
+        if (el.getAttribute('data-tvar')) {
             dataTvar = el.getAttribute('data-tvar');
             el.removeAttribute('data-tvar');
         }
@@ -1233,7 +1233,7 @@ obviel.template = {};
     
     module.TransInfo.prototype.compileDataPlural = function(el) {
         var dataPlural = null;
-        if (el.hasAttribute('data-plural')) {
+        if (el.getAttribute('data-plural')) {
             dataPlural = el.getAttribute('data-plural');
             el.removeAttribute('data-plural');
         }
@@ -1446,17 +1446,17 @@ obviel.template = {};
     module.ContentTrans.prototype.checkDataTransRestrictions = function(
         el) {
         // XXX more restrictions?
-        if (el.hasAttribute('data-if')) {
+        if (el.getAttribute('data-if')) {
             throw new module.CompilationError(
                 el,
                 "inside data-trans element data-if may not be used");
         }
-        if (el.hasAttribute('data-with')) {
+        if (el.getAttribute('data-with')) {
             throw new module.CompilationError(
                 el,
                 "inside data-trans element data-with may not be used");
         }
-        if (el.hasAttribute('data-each')) {
+        if (el.getAttribute('data-each')) {
             throw new module.CompilationError(
                 el,
                 "inside data-trans element data-each may not be used");
@@ -1531,7 +1531,7 @@ obviel.template = {};
 
     module.ContentTrans.prototype.compileTvar = function(el) {
         var tvar = null;
-        if (el.hasAttribute('data-tvar')) {
+        if (el.getAttribute('data-tvar')) {
             tvar = el.getAttribute('data-tvar');
         }
         if (tvar !== null) {
@@ -1539,7 +1539,7 @@ obviel.template = {};
             tvar = tvarInfo.tvar;
         }
         var view = null;
-        if (el.hasAttribute('data-view')) {
+        if (el.getAttribute('data-view')) {
             view = new module.ViewElement(el);
         }
         if (tvar === null) {
@@ -1883,7 +1883,7 @@ obviel.template = {};
     
     getDirective = function(el, name) {
         var value = null;
-        if (!el.hasAttribute(name)) {
+        if (!el.getAttribute(name)) {
             return null;
         }
         
