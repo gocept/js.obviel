@@ -1,7 +1,7 @@
 CHANGES
 *******
 
-1.0b3-3-IE8-gocept (unreleased)
+1.0b3-3-IE8-gocept (2013-06-11)
 ===============================
 
 - Sometimes `hasAttribute` is not defined on dom nodes in IE so we replace
